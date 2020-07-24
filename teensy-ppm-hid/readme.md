@@ -1,11 +1,13 @@
 ### Teensy PPM to HID converter
 
-This sketch requires a teensy 3.x or 4.x, and converts 8 PPM channels to work as standard USB HID joystick.
+This sketch requires a teensy 3.x or 4.x, and converts up to 16* PPM channels to work as standard USB HID joystick.
 
 You can use this to connect anything with PPM output to the OpenHD ground station for use with OpenHD RC
 and SmartSync.
 
-If you need more than 8 channels you will have to modify the sketch at the moment.
+(\* The *code* supports up to 16 channels (it changes automatically), but the `0.1.0` release is built to use 8 
+channels as the expanded channel support is not tested yet. Once tested, there will be a `0.2.0` with prebuilt 
+hex files and 16 channel  support.)
 
 ### Binaries for use with the Teensy Loader
 
@@ -44,7 +46,7 @@ You need to change it to say 64 instead of 16, then save the file, compile the s
 The PPM pin is #10, you can connect it to anything that has PPM output at 3.3v level, which includes the
 PPM solder pad inside flight controllers such as the FlySky i6 or i6x.
 
-Below you can see the Teensy wire solder to the ppm pad inside a FlySky i6x, along with a ground wire soldered 
+Below you can see the Teensy wire soldered to the ppm pad inside a FlySky i6x, along with a ground wire soldered 
 to a gnd pad. The Teensy is attached inside with double sided gorilla tape, and a flat USB wire is routed out
 the back. You can probably find a good panel mount connector instead.
 
