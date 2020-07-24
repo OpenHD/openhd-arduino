@@ -1,10 +1,15 @@
 ### Teensy PPM to HID converter
 
-This sketch requires a teensy 3.x or 4.x, 
+This sketch requires a teensy 3.x or 4.x, and converts 8 PPM channels to work as standard USB HID joystick.
+
+You can use this to connect anything with PPM output to the OpenHD ground station for use with OpenHD RC
+and SmartSync.
+
+If you need more than 8 channels you will have to modify the sketch at the moment.
 
 ### Binaries for use with the Teensy Loader
 
-See the releases page, all you have to do is pick the correct hex file for your Teensy (3.1 and 3.2 are the
+[See the releases page](https://github.com/OpenHD/openhd-arduino/releases/latest), all you have to do is pick the correct hex file for your Teensy (3.1 and 3.2 are the
 same), open it with Teensy Loader and follow the directions in the app.
 
 ### Building
